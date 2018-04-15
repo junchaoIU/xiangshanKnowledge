@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<import resource="applicationConfig.xml"/>
+	
+	<bean name="baseDao" class="com.xiangshan.generic.dao.impls.BaseDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="genericDaoImpl" class="com.xiangshan.generic.dao.impls.GenericDaoImpl" parent="baseDao">
+	</bean>
+	
+	<bean name="historyDaoImpl" class="com.xiangshan.history.dao.impls.HistoryDaoImpl" parent="genericDaoImpl">
+	</bean>
+</beans>

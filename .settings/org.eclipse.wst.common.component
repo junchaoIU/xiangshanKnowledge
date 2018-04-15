@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="XiangShanCulture">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Catalog"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/com.s"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/OntologyResolve"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Utils"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/PageAccess"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/KnowledgeSearch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Statement"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Generic"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/History"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/RelationSearch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Configurations"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/PredicateSearch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TimeSpaceSearch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/IndistinctSearch"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Listener"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Data"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/User"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/SemanticAnalysis"/>
+        <property name="context-root" value="XiangShanCulture"/>
+        <property name="java-output-path" value="/XiangShanCulture/build/classes"/>
+    </wb-module>
+</project-modules>

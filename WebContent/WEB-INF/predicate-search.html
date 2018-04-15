@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<link rel="icon" href="img/SmallLogo.png">
+<title>香山文化知识图谱可视化系统--属性检索</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-select.min.css" rel="stylesheet">
+<link href="css/predicate-search.css" rel="stylesheet">
+<link href="css/encyclopedia.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/predicate-search-events.js"></script>
+<script src="js/query.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/history.js"></script>
+<script src="js/visualize.js"></script>
+<script src="js/proposal.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/content-frame-switch.js"></script>
+<script src="js/encyclopedia.js"></script>
+<script src="js/pagination.js"></script>
+<script src="js/user.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+	<div class="navbar-default" id="navbar">
+		<a href="javascript:"> <img class="navbar-brand" id="nav-logo"
+			src="image/nav_logo.png">
+		</a>
+		<div id="nav-item">
+			<ul class="nav nav-pills">
+				<li><a href="access-homepage">首页</a></li>
+				<li><a href="access-showGraph">图谱展示</a></li>
+				<li><a href="access-knowledgeSearch">知识检索</a></li>
+				<li><a href="access-relationSearch">关系检索</a></li>
+				<li class="active"><a href="access-predicateSearch">属性检索</a></li>
+				<li><a href="access-timeSpaceSearch">时空检索</a></li>
+			</ul>
+		</div>
+		<div id="user-info">
+			<a class="glyphicon glyphicon-user" href="javascript:">  游客</a>
+		</div>
+	</div>
+	<div id='main-frame'>
+		<div id="search-bar">
+			<input id="predicate" type="text" class="form-control" placeholder="请输入属性名" oninput="getProposals(this)">
+			<span class="glyphicon glyphicon-search" onclick="queryByPage()"></span>
+			<button id="query" type="button" class="btn btn-default btn-login" onclick="queryByPage()">检索一下</button>
+			<div id="proposal">
+				<ul class="dropdown-menu">
+				</ul>
+			</div>
+			<p>属性列表:</p>
+			<select class="selectpicker" id="predicate-list">
+			</select>
+		</div>
+		<div id="tab-bar">
+			<ul class="nav nav-tabs nav-justified">
+			  	<li class="active" id="result" onclick="switchContentFrame('result_frame')"><a href="javascript:">检索结果</a></li>
+			    	<li id="graph" onclick="switchContentFrame('graph_frame')"><a href="javascript:">结果图谱</a></li>
+			    	<li id="encyclopedia" onclick="switchContentFrame('encyclopedia_frame')"><a href="javascript:">知识百科</a></li>
+			    	<li id="history" onclick="getHistories('predicateSearch')"><a href="javascript:">回溯检索</a></li>
+			</ul>
+		</div>	
+		<div id="content">
+			<div id="result_frame">
+			</div>
+			<div id="graph_frame">
+			</div>
+			<div id="encyclopedia_frame">
+			</div>
+			<div id="history_frame">
+			</div>
+		</div>
+	</div>
+	<img id="background" src="image/search_background.png"/>
+	<div id="footer">
+		<p align="center">北京师范大学珠海分校管理学院 @2016-2018 http://som.bnuz.edu.cn 版权所有</p>
+	</div>
+
+</body>
+</html>

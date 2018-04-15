@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+@font-face
+{
+	font-family:myFont;
+	src:url('../fonts/YaHeiLight/YaHeiLight.ttf'),
+		url('../fonts/YaHeiLight/YaHeiLight.svg'),
+		url('../fonts/YaHeiLight/YaHeiLight.eot'),
+		url('../fonts/YaHeiLight/YaHeiLight.woff');
+}
+
+body{
+	font-family:myFont;
+	background: url("../image/body_background.jpg");
+	background-size: 102%;
+}
+
+a{
+	color: white;
+}
+
+a:hover{
+	color: #FF8C00;
+}
+
+body{
+	font-family:myFont;
+	background: url("../image/body_background.jpg");
+	background-size: 102%;
+}
+
+#navbar{
+	position:absolute;
+	left:120px;
+	height:80px;
+	width:1040px;
+	top: 20px;
+	background-color: rgba(0,0,0,0);
+	border-bottom:2px solid #F0F0F0;
+}
+
+#nav-logo{
+	width:90px;
+	height:80px;
+	left:10px;
+	position:absolute;
+	float:left;
+}
+
+#nav-item{
+	top:25px;
+	left:280px; 
+	position:absolute;
+	float:left;
+}
+
+#nav-item ul li{
+	margin-left: 15px;
+}
+
+#nav-item ul li.active a{
+	background-color: rgba(0,0,0,0);
+	padding-bottom: 22px;
+	border-bottom: 3px solid #FFA500;
+	border-radius: 0;
+	font-weight:bold;
+	font-size:18px;
+	color: #FFA500;
+}
+
+#nav-item ul li a{
+	color: white;
+	padding: 5px 20px;
+}
+
+#nav-item ul li a:hover{
+	background-color: rgba(255,255,255,0);
+	color: #FFA500;
+}
+
+#user-info{
+	top: 25px;
+	left: 950px;
+	position: absolute;
+	float: left;
+}
+
+#user-info a{
+	top: 5px;
+	font-size: 17px;
+	color: white;
+}
+
+.category{
+	position: absolute;
+	top: 20px;
+}
+
+.category div{
+	width: 214px;
+	height: 500px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 15px 0 0 15px;
+	overflow: auto;
+}
+
+.category p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	color: white;
+}
+
+.ztree li span{
+	color:white;
+}
+
+#main-frame{
+	position: absolute;
+	top: 123px;
+	left: 120px;
+}
+
+#instance-category{
+	left: 250px;
+	
+}
+
+#knowledge-card{
+	position: absolute;
+	width: 540px;
+	left: 500px;
+	top:20px;
+}
+
+#knowledge-card p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	color: white;
+}
+
+#card-tab-bar ul li a{
+	border-radius: 0 0 0 0;
+	border:0;
+	color: white;
+	border-bottom: 1px solid white;
+	background-color: rgba(255,255,255,0);
+}
+
+#card-tab-bar ul li.active a{
+	color: orange;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 0px;
+	background-color: rgba(0,0,0,0);
+}
+
+#knowledge-card div#main{
+	position: absolute;
+	width: 540px;
+	height: 500px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 0 0 0 15px;
+}
+
+#knowledge-card div.content{
+	width: 540px;
+	height: 460px;
+}
+
+#encyclopedia_frame{
+	position: absolute;
+	width: 750px;
+	height: 450px;
+	overflow: auto;
+}
+#encyclopedia_frame .item{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#encyclopedia_frame #introduction{
+	margin-top: 10px;
+}
+
+#encyclopedia_frame #introduction #title{
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	display: inline-block;
+	width: 400px;
+}
+
+#encyclopedia_frame #introduction .show-more, #encyclopedia_frame #introduction .hide-overflow{
+	display: block;
+    width: 80px;
+    background-color: rgba(0,0,0,0);
+    color: #FFA500;
+    font-size: 15px;
+}
+
+#encyclopedia_frame .relative-people .show-more, #encyclopedia_frame .relative-people .hide-overflow{
+	position: relative !important;
+    background-color: rgba(0,0,0,0) !important;
+    top: -30px !important;
+    color: #FFA500 !important;
+    font-size: 15px !important;
+}
+
+
+#encyclopedia_frame #introduction .comment{
+	color: white;
+	margin-top:10px;
+	font-size: 13px;
+	width: 380px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#encyclopedia_frame #introduction #avatar{
+	position: absolute;
+	width: 100px;
+	height: 120px;
+	margin-top: -20px;
+	margin-left: 30px;
+	border-radius:100%;
+	border: 1px solid black;
+}
+
+#encyclopedia_frame .tag{
+	height: 40px;
+}
+
+#encyclopedia_frame .tag-left{
+	position: absolute;
+	color: white;
+	text-align: center;
+	background: 	#4682B4;
+	width:100px;
+	height: 30px;
+	padding-top:5px;
+	border-radius: 5px 0 0 5px;
+}
+
+#encyclopedia_frame .tag-right{
+	position: absolute;
+	margin-left:100px;
+	width: 0px;  
+    height: 0px;  
+    border-top: 15px solid transparent;  
+    border-right: 10px solid transparent;  
+    border-bottom: 15px solid transparent;  
+    border-left: 20px solid	#4682B4; 
+}
+
+#encyclopedia_frame #relative-people-avatar a{
+	width:80px;
+	height:80px;
+	margin-right:-7px;
+	display: inline-block;
+}
+
+#encyclopedia_frame #relative-people-avatar img{
+	position: absolute;
+	width:70px;
+	height:70px;
+}
+
+#encyclopedia_frame #relative-people-avatar span{
+	position: absolute;
+	font-size: 12px;
+	color: white;
+	background-color: rgba(255,165,0,0.8);
+	width: 70px;
+	text-align: center;
+	margin-top:63px;
+}
+
+#encyclopedia_frame #details #details-table .key{
+	color: #FFDEAD;
+	font-weight: bold;
+	font-size: 12px;
+	width: 90px;
+}
+
+#encyclopedia_frame #details #details-table .value{
+	font-size: 12px;
+	color: white;
+}
+
+#encyclopedia_frame .nav-pills>li>a{
+	border-radius: 0px;
+    background: #999;
+    padding: 7px;
+    margin: 1px;
+    font-size: 12px;
+}
+
+#encyclopedia_frame .nav-pills>li>a:hover{
+	color: white;
+	opacity:0.5;
+}
+
+.panel{
+	background-color: rgba(0,0,0,0);
+	border: 0px;
+}
+
+.table tr td{
+	border: 0px;
+	border-bottom: 1px dashed white;
+	padding: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#background{
+	position: absolute;
+	left: 230px;
+	top: 166px;
+	z-index: -1;
+	opacity: 0.2;
+}
+
+
+#footer{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	top: 700px;
+	background-color: rgba(0,0,0,0);
+	padding: 25px 0 0 0;
+	color: white;
+}

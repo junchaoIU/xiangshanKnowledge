@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-4-1 18:50:08 by Hibernate Tools 5.2.8.Final -->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="xiangshan" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.xiangshan.history.entities.QueryHistory" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="query_history">
+        <id name="id" type="string">
+            <column length="50" name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="subject" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="subject"/>
+        </property>
+        <property generated="never" lazy="false" name="predicate" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="predicate"/>
+        </property>
+        <property generated="never" lazy="false" name="object" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="object"/>
+        </property>
+        <property generated="never" lazy="false" name="scope" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="scope"/>
+        </property>
+        <property generated="never" lazy="false" name="timeSpaceScope" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="time_space_scope"/>
+        </property>
+        <property generated="never" lazy="false" name="type" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="type" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="create_date" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="user_name" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

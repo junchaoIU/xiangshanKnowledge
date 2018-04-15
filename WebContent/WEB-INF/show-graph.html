@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<link rel="icon" href="img/SmallLogo.png">
+<title>香山文化知识图谱可视化系统--图谱展示</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" >
+<link href="css/show-graph.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.ztree.core.js"></script>
+<script src="js/show-graph-events.js"></script>
+<script src="js/encyclopedia.js"></script>
+<script src="js/query.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/user.js"></script>
+<script src="js/visualize.js"></script>
+</head>
+
+<body>
+	<div class="navbar-default" id="navbar">
+		<a href="javascript:"> <img class="navbar-brand" id="nav-logo"
+			src="image/nav_logo.png">
+		</a>
+		<div id="nav-item">
+			<ul class="nav nav-pills">
+				<li><a href="access-homepage">首页</a></li>
+				<li class="active"><a href="access-showGraph">图谱展示</a></li>
+				<li><a href="access-knowledgeSearch">知识检索</a></li>
+				<li><a href="access-relationSearch">关系检索</a></li>
+				<li><a href="access-predicateSearch">属性检索</a></li>
+				<li><a href="access-timeSpaceSearch">时空检索</a></li>
+			</ul>
+		</div>
+		<div id="user-info">
+			<a class="glyphicon glyphicon-user" href="javascript:">  游客</a>
+		</div>
+	</div>
+	<div id='main-frame'>
+		<div id="knowledge-category" class="category">
+			<p>知识目录</p>
+			<div id="class-content">
+				<ul id="classes" class="ztree"></ul>
+			</div>
+		</div>
+		<div id="instance-category" class="category">
+			<p>知识实例<span id="instance-number"></span></p>
+			<div id="instance-content">
+				<font id="warning" color="red" size="4"></font>
+				<ul id="instances" class="ztree"></ul>
+			</div>
+		</div>
+		<div id="knowledge-card">
+			<p>知识卡片</p>
+			<div id="main">
+				<div id="card-tab-bar">
+					<ul class="nav nav-tabs nav-justified">
+						<li class="active" id="encyclopedia-tab"><a href="javascript:" onclick="switchCardFrame('encyclopedia_frame')">知识百科</a></li>
+						<li id="graph-tab"><a href="javascript:" onclick="switchCardFrame('graph_frame')">知识图谱</a></li>
+					</ul>
+				</div>
+				<div id="encyclopedia_frame" class="content"></div>
+				<div id="graph_frame" class="content"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p align="center">北京师范大学珠海分校管理学院 @2016-2018 http://som.bnuz.edu.cn 版权所有</p>
+	</div>
+
+</body>
+</html>

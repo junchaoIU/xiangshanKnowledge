@@ -1,0 +1,13 @@
+/.DS_Store
+/QueryHistory.hbm.xml
+/UserInfo.hbm.xml
+/applicationConfig-action-beans.xml
+/applicationConfig-dao-beans.xml
+/applicationConfig-resolver-beans.xml
+/applicationConfig-service-beans.xml
+/applicationConfig.xml
+/com/
+/db.properties
+/hibernate.cfg.xml
+/ontology-properties.xml
+/struts.xml

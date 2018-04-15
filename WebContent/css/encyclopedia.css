@@ -1,0 +1,151 @@
+#encyclopedia_frame #encyclopedia_main{
+	position: absolute;
+	width: 750px;
+	height: 450px;
+	overflow: auto;
+}
+
+#encyclopedia-tab-bar ul li a{
+	border-radius: 0 0 0 0;
+	border:0;
+	color: white;
+	border-bottom: 1px solid white;
+	background-color: rgba(255,255,255,0);
+}
+
+#encyclopedia-tab-bar ul li.active a{
+	color: orange;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 0px;
+	background-color: rgba(0,0,0,0);
+}
+
+#encyclopedia_frame .item{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#encyclopedia_frame #introduction{
+	margin-top: 10px;
+	height: 180px;
+}
+
+#encyclopedia_frame #introduction #title{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+	width: 550px;
+}
+
+#encyclopedia_frame #introduction .show-more, #encyclopedia_frame #introduction .hide-overflow{
+	display: block;
+    width: 80px;
+    background-color: rgba(0,0,0,0);
+    color: #FFA500;
+    font-size: 15px;
+}
+
+#encyclopedia_frame .relative-people .show-more, #encyclopedia_frame .relative-people .hide-overflow{
+	position: relative !important;
+    background-color: rgba(0,0,0,0) !important;
+    top: -30px !important;
+    color: #FFA500 !important;
+    font-size: 15px !important;
+}
+
+#encyclopedia_frame #introduction .comment{
+	color: white;
+	margin-top:10px;
+	font-size: 15px;
+	width: 520px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#encyclopedia_frame #introduction #avatar{
+	position: absolute;
+	width: 130px;
+	height: 150px;
+	margin-top: -20px;
+	margin-left: 60px;
+	border-radius:100%;
+	border: 1px solid black;
+}
+
+#encyclopedia_frame .tag{
+	height: 40px;
+}
+
+#encyclopedia_frame .tag-left{
+	position: absolute;
+	color: white;
+	text-align: center;
+	background: 	#4682B4;
+	width:100px;
+	height: 30px;
+	padding-top:5px;
+	border-radius: 5px 0 0 5px;
+}
+
+#encyclopedia_frame .tag-right{
+	position: absolute;
+	margin-left:100px;
+	width: 0px;  
+    height: 0px;  
+    border-top: 15px solid transparent;  
+    border-right: 10px solid transparent;  
+    border-bottom: 15px solid transparent;  
+    border-left: 20px solid	#4682B4; 
+}
+
+#encyclopedia_frame #relative-people-avatar a{
+	width:80px;
+	height:80px;
+	margin-right:10px;
+	display: inline-block;
+}
+
+#encyclopedia_frame #relative-people-avatar img{
+	position: absolute;
+	width:80px;
+	height:80px;
+}
+
+#encyclopedia_frame #relative-people-avatar span{
+	position: absolute;
+	font-size: 12px;
+	color: white;
+	background-color: rgba(255,165,0,0.8);
+	width: 80px;
+	text-align: center;
+	margin-top:63px;
+}
+
+#encyclopedia_frame #relative-event-infos span{
+	margin-left: 10px;
+	background:red;
+}
+
+#encyclopedia_frame #details #details-table .key{
+	color: #FFDEAD;
+	font-weight: bold;
+	width: 90px;
+}
+
+#encyclopedia_frame #details #details-table .value{
+	color: white;
+}
+
+#encyclopedia_frame .nav-pills>li>a{
+	border-radius: 0px;
+    background: #999;
+    padding: 7px;
+    margin: 5px;
+}
+
+#encyclopedia_frame .nav-pills>li>a:hover{
+	color: white;
+	opacity:0.5;
+}

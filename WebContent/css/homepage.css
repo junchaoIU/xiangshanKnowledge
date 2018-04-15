@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+@font-face
+{
+	font-family:myFont;
+	src:url('../fonts/YaHeiLight/YaHeiLight.ttf'),
+		url('../fonts/YaHeiLight/YaHeiLight.svg'),
+		url('../fonts/YaHeiLight/YaHeiLight.eot'),
+		url('../fonts/YaHeiLight/YaHeiLight.woff');
+}
+
+body{
+	font-family:myFont;
+	background: url("../image/body_background.jpg");
+	background-size: 102%;
+}
+
+
+#navbar{
+	position:absolute;
+	left:120px;
+	height:80px;
+	width:1040px;
+	top: 20px;
+	background-color: rgba(0,0,0,0);
+	border-bottom:2px solid #F0F0F0;
+}
+
+#nav-logo{
+	width:90px;
+	height:80px;
+	left:10px;
+	position:absolute;
+	float:left;
+}
+
+#nav-item{
+	top:25px;
+	left:280px; 
+	position:absolute;
+	float:left;
+}
+
+#nav-item ul li{
+	margin-left: 15px;
+}
+
+#nav-item ul li.active a{
+	background-color: rgba(0,0,0,0);
+	padding-bottom: 22px;
+	border-bottom: 3px solid #FFA500;
+	border-radius: 0;
+	font-weight:bold;
+	font-size:18px;
+	color: #FFA500;
+}
+
+#nav-item ul li a{
+	color: white;
+	padding: 5px 20px;
+}
+
+#nav-item ul li a:hover{
+	background-color: rgba(255,255,255,0);
+	color: #FFA500;
+}
+
+#user-info{
+	top: 25px;
+	left: 950px;
+	position: absolute;
+	float: left;
+}
+
+#user-info a{
+	top: 5px;
+	font-size: 17px;
+	color: white;
+}
+
+#introduction{
+	position: absolute;
+	top: 200px;
+	left: 187px;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 10px 0 0 10px;
+	width: 530px;
+	height: 390px;
+	z-index: -1
+}
+
+#introduction #words{
+	position: absolute;
+	margin: 30px;
+	color: white;
+	z-index: 1
+}
+
+#introduction #background{
+	width: 530px;
+	height: 390px;
+	position: absolute;
+	border-radius: 10px 0 0 10px;
+	opacity:0.3;
+	z-index: 0;
+}
+
+#login-frame{
+	position: absolute;
+	top: 200px;
+	left: 753px;
+	width: 315px;
+	height: 390px;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 0 10px 10px 0;
+}
+
+#login-frame div#title{
+	position: absolute;
+	width: 270px;
+	height: 60px;
+	padding: 0 0 75px 10px;
+	border-bottom: 1px solid white;
+	left: 10px;
+	color: white;
+}
+
+#login-frame table{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+}
+
+#login-frame table td.key span{
+	font-size: 23px;
+	padding-left: 10px;
+	color: white;
+}
+
+#login-frame table td input{
+	border-radius: 5px;
+	width: 180px;
+	height: 30px;
+}
+
+#login-frame img#identify{
+	width:70px;
+	height:30px;
+}
+
+#login-frame input#identify{
+	width:100px;
+}
+
+.btn-login{
+	color: white;
+	font-weight: bold;
+	background: rgb(31,68,96);
+	width: 90px;
+	height: 30px;
+	padding :0;
+	margin-right: 50px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+a#register{
+	
+	color: 	#FA8072;
+}
+
+#register-frame{
+	display:none;
+	position: absolute;
+	top: 150px;
+	left: 500px;
+	width: 350px;
+	height: 470px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 10px 10px 10px 10px;
+	z-index:10;
+}
+
+#register-frame div#title{
+	position: absolute;
+	width: 350px;
+	height: 20px;
+	background: rgba(0,0,0,0.85);
+	padding: 10px 0px 30px 10px;
+	border-bottom: 1px solid white;
+	border-radius: 10px 10px 0 0;
+	color: white;
+}
+
+#register-frame #title p{
+	font-size:18px;
+}
+
+
+#register-frame table{
+	position: absolute;
+	top: 60px;
+	left: 20px;
+}
+
+#register-frame table td.key span{
+	font-size: 23px;
+	padding-left: 10px;
+	color: black;
+}
+
+#register-frame table td.key img{
+	width:25px;
+	height:25px;
+	margin-left:8px;
+}
+
+#register-frame table td input{
+	border-radius: 5px;
+	width: 180px;
+	height: 30px;
+}
+
+#register-frame table td.value{
+	padding-left: 10px;
+}
+
+.btn-register,.btn-logout{
+	color: white;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.8);
+	width: 90px;
+	height: 30px;
+	padding :0;
+	margin-left:20px;
+	margin-right: 50px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+#welcome-frame{
+	display: none;
+	position: absolute;
+	top: 200px;
+	left: 753px;
+	width: 315px;
+	height: 390px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 0 10px 10px 0;
+}
+
+#welcome-frame span{
+	position: absolute;
+	font-size: 25px;
+	color: white;
+	font-weigth: bold;
+	margin: 10px;
+}
+
+#welcome-frame #user-name{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	top: 180px;
+}
+
+#welcome-frame .btn-logout{
+	
+	position: absolute;
+	top: 320px;
+	left:80px;
+}
+
+#footer{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	top: 680px;
+	background-color: rgba(0,0,0,0);
+	padding: 25px 0 0 0;
+	color: white;
+}

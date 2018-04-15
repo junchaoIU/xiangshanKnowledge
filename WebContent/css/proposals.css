@@ -1,0 +1,78 @@
+#keywordProposal_box,#timeSpaceProposal_box{
+	position: absolute;
+	height: 210px;
+	width: 370px;
+	border-width:0px;
+	top:47px;
+	left: 30px;
+	z-index:10;
+	outline:none;
+	overflow:auto;
+}
+
+#predicateProposal_box {
+	position: absolute;
+	height: 210px;
+	width: 395px;
+	border-width:0px;
+	top:28px;
+	left: 20px;
+	z-index:10;
+	outline:none;
+	overflow:auto;
+}
+
+#subjectProposal_box,#objectProposal_box{
+	position: absolute;
+	height: 210px;
+	width: 340px;
+	border-width:0px;
+	top:30px;
+	left: 20px;
+	z-index:10;
+	outline:none;
+	overflow:auto;
+}
+
+#subjectProposal_box li{
+	text-align: left;
+}
+
+#objectProposal_box li{
+	text-align: right;
+}
+
+.proposal-list {
+	list-style: none;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.44);
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+	z-index:11;
+}
+
+ul.proposal-list{
+	margin: 0px;
+	padding: 0px;
+}
+
+.proposal-list li {
+	text-align: left;
+	padding: 5px;
+	font-family: inherit;
+	border-radius: 1.5px;
+	border-width: none;
+	height: 25px;
+	line-height: 25px;
+	background-color: rgba(150,155,151, 0.95);
+	cursor: pointer;
+	z-index:13;
+	font-family: myFont;
+}
+
+li.proposal.selected {
+	background-color: rgba(175, 42, 0, 1);
+	color: white;
+}

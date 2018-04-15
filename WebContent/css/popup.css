@@ -1,0 +1,226 @@
+#popup-frame-proposal{
+	position: absolute;
+	width:300px;
+	height:400px;
+	top: 200px;
+	left: 450px;
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 15px 15px 15px 15px;
+	z-index: 4;
+}
+
+#popup-frame-proposal>#title{
+	height: 30px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 15px 15px 0 0;
+}
+
+#popup-frame-proposal div#title p{
+	position:absolute;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+#popup-frame-proposal div#title span{
+	position: absolute;
+	left:270px;
+	top: 5px;
+	font-size : 20px;
+}
+
+#popup-frame{
+	position: absolute;
+	width: 540px;
+	height: 430px;
+	top: 260px;
+	left: 340px;
+	background-color:rgba(0,0,0,0.8);
+	border-radius: 15px 15px 15px 15px;
+	z-index: 4;
+}
+
+#popup-frame>#title{
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 15px 15px 0 0;
+	height: 30px;
+}
+
+#popup-frame div#title p{
+	position:absolute;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+#popup-frame div#title span{
+	position: absolute;
+	left:510px;
+	top: 5px;
+	font-size : 20px;
+}
+
+#popup-frame #title #info{
+	margin-left:100px;
+	font-size: 15px;
+	margin-top:4px;
+	color: green;
+}
+
+.popup-encyclopedia{
+	
+}
+
+.popup-encyclopedia .item{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.popup-encyclopedia #introduction{
+	margin-top: 10px;
+	height: 180px;
+}
+
+.popup-encyclopedia #introduction #title{
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	display: inline-block;
+	width: 400px;
+}
+
+.popup-encyclopedia #introduction .comment{
+	color: white;
+	margin-top:10px;
+	font-size: 13px;
+	width: 390px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.popup-encyclopedia #introduction .show-more,.popup-encyclopedia #introduction .hide-overflow{
+	display: block;
+    width: 80px;
+    background-color: rgba(0,0,0,0);
+    color: #FFA500;
+    font-size: 15px;
+}
+
+.popup-encyclopedia .relative-people .show-more,.popup-encyclopedia .relative-people .hide-overflow{
+	position: relative !important;
+    background-color: rgba(0,0,0,0) !important;
+    top: -30px !important;
+    color: #FFA500 !important;
+    font-size: 15px !important;
+}
+
+.popup-encyclopedia #introduction #avatar{
+	position: absolute;
+	width: 100px;
+	height: 120px;
+	margin-top: -20px;
+	margin-left: 20px;
+	border-radius:100%;
+	border: 1px solid black;
+}
+
+.popup-encyclopedia .tag{
+	height: 40px;
+}
+
+.popup-encyclopedia .tag-left{
+	position: absolute;
+	color: white;
+	text-align: center;
+	background: 	#4682B4;
+	width:100px;
+	height: 30px;
+	padding-top:5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.popup-encyclopedia .tag-right{
+	position: absolute;
+	margin-left:100px;
+	width: 0px;  
+    height: 0px;  
+    border-top: 15px solid transparent;  
+    border-right: 10px solid transparent;  
+    border-bottom: 15px solid transparent;  
+    border-left: 20px solid	#4682B4; 
+}
+
+.popup-encyclopedia #relative-people-avatar a{
+	width:80px;
+	height:80px;
+	margin-right:6px;
+	display: inline-block;
+}
+
+.popup-encyclopedia #relative-people-avatar img{
+	position: absolute;
+	width:80px;
+	height:80px;
+}
+
+.popup-encyclopedia #relative-people-avatar span{
+	position: absolute;
+	font-size: 12px;
+	color: white;
+	background-color: rgba(255,165,0,0.8);
+	width: 80px;
+	text-align: center;
+	margin-top:63px;
+}
+
+.popup-encyclopedia #details #details-table .key{
+	color: #FFDEAD;
+	font-weight: bold;
+	font-size: 12px;
+	width: 90px;
+}
+
+.popup-encyclopedia #details #details-table .value{
+	font-size: 12px;
+	color: white;
+}
+
+.popup-encyclopedia .nav-pills>li>a{
+	border-radius: 0px;
+    background: #999;
+    padding: 7px;
+    margin: 1px;
+    font-size: 12px;
+}
+
+.popup-encyclopedia .nav-pills>li>a:hover{
+	color: white;
+	opacity:0.5;
+}
+
+.popup-encyclopedia .panel{
+	background-color: rgba(0,0,0,0);
+	border: 0px;
+}
+
+.popup-encyclopedia .table tr td{
+	border: 0px;
+	border-bottom: 1px dashed white;
+	padding: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#popup-frame div#title span:hover{
+	cursor: pointer;
+}
+
+#popup-frame div#popup-content{
+	position: absolute;
+	width: 540px;
+	height: 400px;
+	overflow: auto;
+}
+

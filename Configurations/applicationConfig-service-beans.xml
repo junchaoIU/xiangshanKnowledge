@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<import resource="applicationConfig-resolver-beans.xml"/>
+	<import resource="applicationConfig-dao-beans.xml"/>
+	
+	<bean name="baseService" class="com.xiangshan.generic.service.impls.BaseService">
+		<property name="ontologyResolver" ref="jenaResolver"></property>
+		<property name="dao" ref="genericDaoImpl"></property>
+	</bean>
+	
+	<bean name="catalogServiceImpl" class="com.xiangshan.catalog.service.impls.CatalogServiceImpl" parent="baseService"></bean>
+	
+	<bean name="knowledgeSearchServiceImpl" class="com.xiangshan.knowledge.service.impls.KnowledgeSearchServiceImpl" parent="baseService"></bean>
+	
+	<bean name="statementServiceImpl" class="com.xiangshan.statement.service.impls.StatementServiceImpl" parent="baseService"></bean>
+	
+	<bean name="relationSearchServiceImpl" class="com.xiangshan.relation.service.impls.RelationSearchServiceImpl" parent="baseService"></bean>
+
+	<bean name="predicateSearchServiceImpl" class="com.xiangshan.predicate.service.impls.PredicateSearchServiceImpl" parent="baseService"></bean>
+
+	<bean name="timeSpaceSearchServiceImpl" class="com.xiangshan.timespace.service.impls.TimeSpaceSearchServiceImpl" parent="baseService"></bean>
+	
+	<bean name="indistinctSearchServiceImpl" class="com.xiangshan.indistinct.service.impls.IndistinctSearchServiceImpl" parent="baseService"></bean>
+
+	<bean name="semanticAnalyseServiceImpl" class="com.xiangshan.semantic.service.impls.SemanticAnalyseServiceImpl" parent="baseService"></bean>
+	
+	<bean name="userServiceImpl" class="com.xiangshan.user.service.impls.UserServiceImpl" parent="baseService"></bean>
+	
+	<bean name="historyServiceImpl" class="com.xiangshan.history.service.impls.HistoryServiceImpl" parent="baseService">
+		<property name="historyDao" ref="historyDaoImpl"></property>
+	</bean>
+</beans>

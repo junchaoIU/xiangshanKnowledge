@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-3-15 20:45:24 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="xiangshan" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.xiangshan.user.entities.UserInfo" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user_info">
+        <id name="userName" type="string">
+            <column length="30" name="user_name"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="userPassword" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="user_password" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="userOld" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="user_old"/>
+        </property>
+        <property generated="never" lazy="false" name="userRole" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="user_role" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="registerDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="register_date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

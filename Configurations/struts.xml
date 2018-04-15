@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 
+		package:strtus2用包来组织模块
+		name:用于被其他包引用
+		extends：用于继承其它包的配置，通常情况下需要继承struts-default
+	 -->
+	 
+	<package name="xiangShan-default" extends="struts-default">
+	
+	<interceptors>
+		
+		<interceptor name="accessInterceptor" class="com.xiangshan.access.interceptors.AccessInterceptor"></interceptor>
+		
+		<interceptor-stack name="myStack">
+		
+			<interceptor-ref name="paramsPrepareParamsStack">
+				<param name="prepare.alwaysInvokePrepare">false</param>
+			</interceptor-ref>
+			
+		</interceptor-stack>
+	</interceptors>
+	
+	<default-interceptor-ref name="myStack">
+	
+	</default-interceptor-ref>
+	
+	<!-- 配置本体目录的action -->
+	<action name="catalog-*" class="catalogAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置知识检索的action -->
+	<action name="knowledge-*" class="knowledgeSearchAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置三元组处理的action -->
+	<action name="statement-*" class="statementAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置关系检索的action -->
+	<action name="relation-*" class="relationSearchAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置属性检索的action -->
+	<action name="predicate-*" class="predicateSearchAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置时空检索的action -->
+	<action name="timeSpace-*" class="timeSpaceSearchAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置模糊检索的action -->
+	<action name="indistinct-*" class="indistinctSearchAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置检索历史的action -->
+	<action name="history-*" class="historyAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<action name="semantic-*" class="semanticAnalyseAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<action name="user-*" class="userAction" method="{1}">
+	
+		<result type="stream">
+			<param name="contentType">text/javascript</param>
+			<param name="inputName">result</param>
+		</result>
+		
+	</action>
+	
+	<!-- 配置访问页面的action -->
+	<action name="access-*" class="pageAccessAction" method="{1}">
+		<interceptor-ref name="accessInterceptor"></interceptor-ref>
+		<interceptor-ref name="myStack"></interceptor-ref>
+		
+		<result name="homepage">homepage.html</result>
+		<result name="showGraphPage">WEB-INF/show-graph.html</result>
+		<result name="knowledgeSearchPage">WEB-INF/knowledge-search.html</result>
+		<result name="predicateSearchPage">WEB-INF/predicate-search.html</result>
+		<result name="relationSearchPage">WEB-INF/relation-search.html</result>
+		<result name="timeSpaceSearchPage">WEB-INF/timespace-search.html</result>
+		
+	</action>
+		
+	</package>
+    
+</struts>

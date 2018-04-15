@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<link rel="icon" href="img/SmallLogo.png">
+<title>香山文化知识图谱可视化系统--首页</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/homepage.css" rel="stylesheet">
+<link href="css/bootstrap-select.min.css" rel="stylesheet">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/login_logout_register.js"></script> 
+<script src="js/popup.js"></script> 
+<script src="js/user.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+</head>
+
+<script>
+	function access(url){
+		
+		var time = new Date().getTime();
+		location.href = url+"?time="+time;
+		
+		return false;
+	}
+	
+	function resetLogin(){
+		$("#login-frame input").val("");
+	}
+	
+	
+	$(function(){
+		
+		if(cur_user_infos!=null){
+			$("#login-frame").hide();
+			$("#welcome-frame #user-name").text(cur_user_infos.userName);
+			$("#welcome-frame").show();
+			
+		}else{
+			$("#welcome-frame").hide();
+			$("#login-frame").show();
+		}
+	})
+</script>
+
+<body>
+	<div class="navbar-default" id="navbar">
+		<a href="#"> <img class="navbar-brand" id="nav-logo"
+			src="image/nav_logo.png">
+		</a>
+		<div id="nav-item">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="javscript:" onclick="return access('access-homepage')">首页</a></li>
+				<li><a href="javscript:" onclick="return access('access-showGraph')">图谱展示</a></li>
+				<li><a href="javscript:" onclick="return access('access-knowledgeSearch')">知识检索</a></li>
+				<li><a href="javscript:" onclick="return access('access-relationSearch')">关系检索</a></li>
+				<li><a href="javscript:" onclick="return access('access-predicateSearch')">属性检索</a></li>
+				<li><a href="javscript:" onclick="return access('access-timeSpaceSearch')">时空检索</a></li>
+			</ul>
+		</div>
+		<div id="user-info">
+			<a class="glyphicon glyphicon-user" href="#">游客</a>
+		</div>
+	</div>
+	<div id='introduction'>
+		<div id='words'>
+			<h2><strong>香山文化</strong></h2>
+			<br><br>
+			<p>
+				<strong>
+					香山文化在地缘上是指包括今天的中山、珠海、澳门<br>
+					在内的地域文化。它在本质上集中体现了岭南文化中<br>
+					广府文化的文化特征，是中原文化、土著文化、西洋<br>
+					文化、南洋文化相互碰撞和不断融合的产物，是相对<br>
+					岭南文化而言的子文化，是岭南文化的重要组成部分。
+				</strong>
+			</p>
+		</div>
+		<img id="background" src="image/homepage_background.jpg"/>
+	</div>
+	<div id="login-frame">
+		<div id="title">
+			<h1>登陆</h1>
+		</div>
+		<table>
+			<tr>
+				<td class="key"><span class="glyphicon glyphicon-user"></span></td>
+				<td><input id="userName" type="text" class="form-control" placeholder="输入用户名"></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td class="key"><span class="glyphicon glyphicon-lock"></span></td>
+				<td><input id="password" type="password" class="form-control" placeholder="输入密码"></td>
+			</tr>
+		
+			<tr height=40px></tr>
+			<tr>
+				<td colspan="2">
+					<a href="javscript:" id="register" onclick="showRegister()"><b>还没有账号？点击注册</b></a>
+				</td>
+			</tr>
+			<tr height=60px></tr>
+			<tr>
+				<td colspan="2">
+					<button type="button" class="btn btn-default btn-login" onclick="login()">登陆</button>
+					<button type="reset" class="btn btn-default btn-login" onclick="resetLogin()">重置</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="register-frame">
+		<div id="title">
+			<p>注册</p>
+		<table>
+			<tr>
+				<td class="key"><span class="glyphicon glyphicon-user"></span></td>
+				<td class="value"><input id="register_userName" type="text" class="form-control" placeholder="输入用户名"></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td class="key"><span class="glyphicon glyphicon-lock"></span></td>
+				<td class="value"><input id="register_password" type="password" class="form-control" placeholder="输入密码"></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td class="key"><img src="image/old_black.png"/></td>
+				<td class="value"><input id="old" type="text" class="form-control" placeholder="输入年龄"></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td class="key"><img src="image/gender_black.png"/></td>
+				<td class="value"><select class="selectpicker" id="gender">
+					<option>男</option>
+					<option>女</option>
+				</select></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td class="key"><img src="image/role_black.png"/></td>
+				<td class="value"><input id="role" type="text" class="form-control" disabled="disabled" value="普通用户"></td>
+			</tr>
+			<tr height=40px></tr>
+			<tr>
+				<td colspan="2">
+					<button type="button" class="btn btn-default btn-register" onclick="register()">注册</button>
+					<button type="reset" class="btn btn-default btn-register" onclick="closeRegister()">取消</button>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div id=welcome-frame>
+		<span id="welcome">您已登陆成功!<br>欢迎使用知识图谱系统</span>
+		<span id="user-name" class="glyphicon glyphicon-user"></span>
+		<button type="button" class="btn btn-default btn-logout" onclick="logout()">注销</button>
+	</div>
+	<div id="footer">
+		<p align="center">北京师范大学珠海分校管理学院 @2016-2018 http://som.bnuz.edu.cn 版权所有</p>
+	</div>
+
+</body>
+</html>

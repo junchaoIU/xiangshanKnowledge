@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Configurations"/>
+	<classpathentry kind="src" path="Catalog"/>
+	<classpathentry kind="src" path="Utils"/>
+	<classpathentry kind="src" path="OntologyResolve"/>
+	<classpathentry kind="src" path="PageAccess"/>
+	<classpathentry kind="src" path="KnowledgeSearch"/>
+	<classpathentry kind="src" path="Data"/>
+	<classpathentry kind="src" path="Statement"/>
+	<classpathentry kind="src" path="Generic"/>
+	<classpathentry kind="src" path="History"/>
+	<classpathentry kind="src" path="RelationSearch"/>
+	<classpathentry kind="src" path="PredicateSearch"/>
+	<classpathentry kind="src" path="TimeSpaceSearch"/>
+	<classpathentry kind="src" path="IndistinctSearch"/>
+	<classpathentry kind="src" path="Listener"/>
+	<classpathentry kind="src" path="User"/>
+	<classpathentry kind="src" path="SemanticAnalysis"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/catalina-storeconfig.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/ecj-4.6.3.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/jaspic-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-jni.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-util-scan.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/tomcat-websocket.jar"/>
+	<classpathentry kind="lib" path="/Users/yyinc/apache-tomcat-9.0.4/lib/websocket-api.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

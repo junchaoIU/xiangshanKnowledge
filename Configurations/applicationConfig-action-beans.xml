@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="applicationConfig-service-beans.xml"/>
+	
+	<bean name="catalogAction" class="com.xiangshan.catalog.actions.CatalogAction" scope="prototype">
+		<property name="catalogService" ref="catalogServiceImpl"></property>
+	</bean>
+	
+	<bean name="pageAccessAction" class="com.xiangshan.access.actions.PageAccessAction" scope="prototype"></bean>
+	
+	<bean name="knowledgeSearchAction" class="com.xiangshan.knowledge.actions.KnowledgeSearchAction" scope="prototype" parent="genericAction">
+		<property name="knowledgeSearchService" ref="knowledgeSearchServiceImpl"></property>
+	</bean>
+	
+	<bean name="statementAction" class="com.xiangshan.statement.actions.StatementAction" scope="prototype">
+		<property name="statementService" ref="statementServiceImpl"></property>
+	</bean>
+	
+	<bean name="relationSearchAction" class="com.xiangshan.relation.actions.RelationSearchAction" scope="prototype" parent="genericAction">
+		<property name="relationSearchService" ref="relationSearchServiceImpl"></property>
+	</bean>
+	
+	<bean name="predicateSearchAction" class="com.xiangshan.predicate.actions.PredicateSearchAction" scope="prototype" parent="genericAction">
+		<property name="predicateSearchService" ref="predicateSearchServiceImpl"></property>
+	</bean>
+	
+	<bean name="timeSpaceSearchAction" class="com.xiangshan.timespace.actions.TimeSpaceSearchAction" scope="prototype" parent="genericAction">
+		<property name="timeSpaceSearchService" ref="timeSpaceSearchServiceImpl"></property>
+	</bean>
+	
+	<bean name="indistinctSearchAction" class="com.xiangshan.indistinct.actions.IndistinctSearchAction" scope="prototype">
+		<property name="indistinctSearchService" ref="indistinctSearchServiceImpl"></property>
+	</bean>
+	
+	<bean name="genericAction" class="com.xiangshan.generic.actions.GenericAction" scope="prototype">
+		<property name="historyService" ref="historyServiceImpl"></property>
+	</bean>
+	
+	<bean name="historyAction" class="com.xiangshan.history.actions.HistoryAction" scope="prototype" parent="genericAction">
+	</bean>
+	
+	<bean name="semanticAnalyseAction" class="com.xiangshan.semantic.actions.SemanticAnalyseAction" scope="prototype">
+		<property name="semanticAnalyseService" ref="semanticAnalyseServiceImpl"></property>
+	</bean>
+	
+	<bean name="userAction" class="com.xiangshan.user.actions.UserAction" scope="prototype">
+		<property name="userService" ref="userServiceImpl"></property>
+	</bean>
+	
+</beans>
